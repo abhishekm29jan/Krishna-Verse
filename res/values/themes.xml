@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main App Theme (DO NOT CHANGE) -->
+    <style name="Theme.KrishnaVerse" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.KrishnaVerse.Splash" parent="Theme.SplashScreen">
+        <!-- Full screen background image -->
+        <item name="windowSplashScreenBackground">@drawable/splash_background</item>
+
+        <!-- Disable app icon on splash -->
+        <item name="windowSplashScreenAnimatedIcon">@null</item>
+
+        <!-- Switch to main theme -->
+        <item name="postSplashScreenTheme">@style/Theme.KrishnaVerse</item>
+    </style>
+
+
+
+</resources>

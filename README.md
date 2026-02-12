@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF9933,100:8B0000&height=200&section=header&text=Krishna-Verse&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=35" />
+  <img src="https://capsule-render.vercel.app/api?type=blur&color=0:1e3c72,100:2a5298&height=220&section=header&text=🪔%20Krishna-Verse%20🦚&fontSize=42&fontColor=FFD700&animation=twinkling&fontAlignY=35&desc=Divine%20Guidance%20Through%20Bhagavad%20Gita&descAlignY=60&descSize=16" />
 </p>
+
 
 <p align="center">
   🪔 A Gita-Based AI-Inspired Chatbot for Emotional Guidance

@@ -1,50 +1,149 @@
-# 🕉️ Krishna-Verse  
-### 📱 A Jetpack Compose GPT App Grounded in the Bhagavad Gita
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF9933,100:8B0000&height=200&section=header&text=Krishna-Verse&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=35" />
+</p>
 
-Krishna-Verse is an Android application built using **Kotlin** and **Jetpack Compose** that provides Bhagavad Gita-based guidance through a clean chat-style interface 💬📖  
-Users can ask questions related to real-life problems (stress, fear, motivation, confusion, duty, etc.), and the app responds with a relevant **Bhagavad Gita shloka** along with its Sanskrit text and meaning.
+<p align="center">
+  🪔 A Gita-Based AI-Inspired Chatbot for Emotional Guidance
+</p>
 
-To make the explanation easier for users, the app also integrates a **GPT API** that generates a simple modern interpretation based on the selected verse 🤖✨
-
----
-
-## ✨ Key Features
-
-- 💬 Chat-style interface built using **Jetpack Compose**
-- 📖 Displays relevant Bhagavad Gita shlokas for user queries
-- 💾 Stores shlokas locally using an **offline JSON dataset**
-- 🕉️ Shows **Sanskrit + transliteration + meaning**
-- 🤖 GPT-based simplified explanation for better understanding
-- 🌅 Daily Krishna Message (motivational verse feature)
+<p align="center">
+  <img src="https://img.shields.io/badge/Kotlin-1.9-purple?logo=kotlin" />
+  <img src="https://img.shields.io/badge/Jetpack%20Compose-UI-blue?logo=android" />
+  <img src="https://img.shields.io/badge/Architecture-MVVM-success" />
+  <img src="https://img.shields.io/badge/Platform-Android-green?logo=android" />
+  <img src="https://img.shields.io/badge/Offline-Enabled-orange" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
+</p>
 
 ---
 
-## 🏗️ How the App Works (Workflow)
+## 🌿 About the Project
 
-1. The user enters a question in the chat screen  
-2. The app searches the local **JSON file** for a relevant shloka  
-3. The selected verse is displayed (Sanskrit + meaning)  
-4. The user query + selected shloka is sent to the GPT API  
-5. GPT returns a simplified modern explanation  
-6. The final output is shown in the chat interface  
+**Krishna-Verse** is an Android chatbot application built using **Kotlin & Jetpack Compose** that provides emotional and spiritual guidance based on the teachings of the **Bhagavad Gita**.
+
+Instead of using heavy ML models, this app uses a **rule-based intent matching system** with manually tagged verses to deliver relevant, explainable, and compassionate responses.
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ Features
 
-- **Kotlin**
-- **Jetpack Compose**
-- **ViewModel + State Management**
-- **Coroutines** (for API calls)
-- **Local JSON file** (offline Bhagavad Gita shloka storage)
-- **GPT API Integration** (for explanation generation)
+- 💬 Chat-style conversational UI  
+- 📜 Curated Bhagavad Gita verses with emotional explanations  
+- 🏷️ Manual emotional tagging for improved accuracy  
+- 🎯 Weighted intent keyword matching  
+- 🧠 Context-aware scoring system  
+- 🔁 Session memory to avoid repetition  
+- 📱 Fully offline – No API required  
+- 🌙 Material 3 UI with dark mode support  
 
 ---
 
-## 📸 Screenshots
+## 🧠 How It Works
 
-Add your screenshots in the `images/` folder and link them here 👇
+1️⃣ User enters a question or emotional concern  
+2️⃣ Input is cleaned and analyzed  
+3️⃣ Intent keywords are detected  
+4️⃣ Verses are scored using weighted logic  
+5️⃣ Top matches are shortlisted  
+6️⃣ Krishna-style guidance is displayed  
 
-```md
-![Chat UI](images/2.jpg)
-![Shloka Output](images/3.jpg)
+---
+
+## 🏗️ System Architecture
+
+```
+Krishna-Verse
+│
+├── 📦 data
+│   ├── GitaRepository.kt
+│   ├── GitaVerse.kt
+│   └── gita_chatbot.json
+│
+├── 📦 viewmodel
+│   └── ChatViewModel.kt
+│
+├── 📦 ui
+│   ├── ChatScreen.kt
+│   ├── MessageInput.kt
+│   ├── UserBubble.kt
+│   └── KrishnaBubble.kt
+│
+├── MainActivity.kt
+│
+└── assets/
+    └── gita_chatbot.json
+```
+
+---
+
+## 🏛️ Architecture
+
+The app follows **MVVM Architecture**:
+
+- 🎨 UI Layer → Jetpack Compose  
+- 🧠 ViewModel Layer → State & logic handling  
+- 📂 Repository Layer → Data processing  
+- 📜 JSON Dataset → Tagged Bhagavad Gita verses  
+
+✔ Clean separation of concerns  
+✔ Scalable structure  
+✔ Maintainable codebase  
+
+---
+
+## ⚙️ Tech Stack
+
+- 🟣 Kotlin  
+- 🎨 Jetpack Compose  
+- 🏗️ MVVM Architecture  
+- 📂 Local JSON Dataset  
+- 🔍 Rule-Based Intent Matching  
+- 📱 Android Studio  
+
+---
+
+## 🎯 Accuracy Methodology
+
+Accuracy is achieved through:
+
+- 🏷️ Manual semantic tagging  
+- ⚖️ Weighted keyword scoring  
+- ➕ Context bonus for multiple intent matches  
+- 🔁 Session memory to prevent repetition  
+- 🧪 Manual validation testing  
+
+This ensures the system is:
+- Explainable  
+- Lightweight  
+- Offline-ready  
+- Academically suitable  
+
+---
+
+## 📌 Limitations
+
+- Rule-based matching (not full NLP)  
+- Cannot understand sarcasm or complex metaphors  
+- Limited to dataset coverage  
+
+---
+
+## 🔮 Future Scope
+
+- 🤖 NLP / ML integration  
+- 🌍 Multi-language support  
+- 🎙️ Voice-based interaction  
+- ☁️ Cloud API integration  
+- 📊 Emotion analytics  
+
+---
+
+## 👨‍💻 Developer
+
+Built with dedication to merge technology with timeless wisdom.
+
+---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B0000,100:FF9933&height=120&section=footer"/>
+</p>

@@ -60,46 +60,39 @@ It is designed to work **fully offline** while also being **scalable for real AI
 
 ## 🏗️ System Architecture
 
-Krishna-Verse
-│
-├── 📦 data
-│ ├── auth/
-│ │ └── FirebaseAuthManager.kt
-│ │
-│ ├── local/
-│ │ ├── AppDatabase.kt
-│ │ └── ChatDao.kt
-│ │
-│ └── model/
-│ ├── AuthState.kt
-│ ├── ChatEntity.kt
-│ ├── ChatItem.kt
-│ └── GitaVerse.kt
-│
-├── 📦 repository
-│ └── GitaRepository.kt
-│
-├── 📦 ui
-│ ├── components/
-│ │ ├── AppBackground.kt
-│ │ └── DrawerItemWithIcon.kt
-│ │
-│ ├── navigation/
-│ │ └── AppNavigation.kt
-│ │
-│ └── screens/
-│ └── ChatScreen.kt
-│
-├── 📦 util
-│ ├── AnimatedMessage.kt
-│ ├── FakeEmotionDetector.kt
-│ ├── JsonLoader.kt
-│ ├── MessageBubble.kt
-│ ├── MessageInput.kt
-│ └── GitaVerse.kt
-│
-└── MainActivity.kt
+## 🔄 Application Flow
 
+```mermaid
+flowchart TD
+    A[User Input] --> B[Chat UI (Compose)]
+    B --> C[ChatViewModel]
+    C --> D[Emotion Analyzer]
+    C --> E[Keyword Processing]
+
+    D --> F[Detected Emotion]
+    E --> G[Intent Matching]
+
+    F --> H[GitaRepository]
+    G --> H
+
+    H --> I[Score & Rank Verses]
+    I --> J[Select Best Match]
+
+    J --> K[Generate Krishna Response]
+    K --> L[Update Chat State]
+
+    L --> M[Display in UI]
+
+    C --> N[Room Database]
+    N --> O[Save Chat History]
+
+    subgraph Firebase
+        P[Authentication]
+        Q[Profile Image Storage]
+    end
+
+    C --> P
+    C --> Q
 
 ---
 

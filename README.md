@@ -2,7 +2,6 @@
   <img src="https://capsule-render.vercel.app/api?type=blur&color=0:1e3c72,100:2a5298&height=220&section=header&text=🪔%20Krishna-Verse%20🦚&fontSize=42&fontColor=FFD700&animation=twinkling&fontAlignY=35&desc=Divine%20Guidance%20Through%20Bhagavad%20Gita&descAlignY=60&descSize=16" />
 </p>
 
-
 <p align="center">
   🪔 A Gita-Based AI-Inspired Chatbot for Emotional Guidance
 </p>
@@ -60,9 +59,50 @@ It is designed to work **fully offline** while also being **scalable for real AI
 
 ## 🏗️ System Architecture
 
+Krishna-Verse
+│
+├── 📦 data
+│   ├── auth/
+│   │   └── FirebaseAuthManager.kt
+│   │
+│   ├── local/
+│   │   ├── AppDatabase.kt
+│   │   └── ChatDao.kt
+│   │
+│   └── model/
+│       ├── AuthState.kt
+│       ├── ChatEntity.kt
+│       ├── ChatItem.kt
+│       └── GitaVerse.kt
+│
+├── 📦 repository
+│   └── GitaRepository.kt
+│
+├── 📦 ui
+│   ├── components/
+│   │   ├── AppBackground.kt
+│   │   └── DrawerItemWithIcon.kt
+│   │
+│   ├── navigation/
+│   │   └── AppNavigation.kt
+│   │
+│   └── screens/
+│       └── ChatScreen.kt
+│
+├── 📦 util
+│   ├── AnimatedMessage.kt
+│   ├── FakeEmotionDetector.kt
+│   ├── JsonLoader.kt
+│   ├── MessageBubble.kt
+│   ├── MessageInput.kt
+│   └── GitaVerse.kt
+│
+└── MainActivity.kt
+
+---
+
 ## 🔄 Application Flow
 
-```mermaid
 flowchart TD
     A[User Input] --> B[Chat UI (Compose)]
     B --> C[ChatViewModel]
@@ -123,13 +163,11 @@ The app follows **MVVM Architecture**:
 - 🌐 Retrofit + OkHttp  
 - 📂 Local JSON Dataset  
 - 🧠 Rule-Based NLP System  
-- 🔄 Coroutines & State Management  
+- 🔄 Coroutines  
 
 ---
 
 ## 🎯 Accuracy Methodology
-
-Accuracy is achieved through:
 
 - 🏷️ Manual semantic tagging of verses  
 - ⚖️ Weighted keyword scoring system  
@@ -137,20 +175,12 @@ Accuracy is achieved through:
 - 😊 Emotion-aware filtering  
 - 🔁 Session memory to prevent repetition  
 
-This ensures the system is:
-
-- Explainable  
-- Lightweight  
-- Emotion-aware  
-- Offline-capable  
-- Highly optimized for mobile  
-
 ---
 
 ## 📌 Limitations
 
 - Rule-based system (not full NLP yet)  
-- Limited understanding of complex language/sarcasm  
+- Limited understanding of complex language  
 - Depends on dataset coverage  
 
 ---
@@ -158,11 +188,10 @@ This ensures the system is:
 ## 🔮 Future Scope
 
 - 🤖 Gemini / OpenAI API integration  
-- ☁️ Firestore chat sync (cloud backup)  
+- ☁️ Firestore chat sync  
 - 🧠 ML-based emotion detection (TensorFlow Lite)  
 - 🌍 Multi-language support  
 - 🎙️ Voice-based interaction  
-- 📊 Personalized recommendations  
 
 ---
 

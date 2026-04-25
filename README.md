@@ -8,72 +8,98 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Kotlin-1.9-purple?logo=kotlin" />
+  <img src="https://img.shields.io/badge/Kotlin-2.0-purple?logo=kotlin" />
   <img src="https://img.shields.io/badge/Jetpack%20Compose-UI-blue?logo=android" />
   <img src="https://img.shields.io/badge/Architecture-MVVM-success" />
   <img src="https://img.shields.io/badge/Platform-Android-green?logo=android" />
   <img src="https://img.shields.io/badge/Offline-Enabled-orange" />
-  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
+  <img src="https://img.shields.io/badge/Firebase-Integrated-yellow" />
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen" />
 </p>
 
 ---
 
 ## 🌿 About the Project
 
-**Krishna-Verse** is an Android chatbot application built using **Kotlin & Jetpack Compose** that provides emotional and spiritual guidance based on the teachings of the **Bhagavad Gita**.
+**Krishna-Verse** is a modern Android chatbot application built using **Kotlin & Jetpack Compose** that provides emotional and spiritual guidance based on the teachings of the **Bhagavad Gita**.
 
-Instead of using heavy ML models, this app uses a **rule-based intent matching system** with manually tagged verses to deliver relevant, explainable, and compassionate responses.
+The app combines a **rule-based intelligent response system** with a **ChatGPT-like conversational UI**, delivering meaningful, explainable, and emotionally aware responses.
+
+It is designed to work **fully offline** while also being **scalable for real AI integration (Gemini/OpenAI)**.
 
 ---
 
 ## ✨ Features
 
-- 💬 Chat-style conversational UI  
-- 📜 Curated Bhagavad Gita verses with emotional explanations  
-- 🏷️ Manual emotional tagging for improved accuracy  
-- 🎯 Weighted intent keyword matching  
-- 🧠 Context-aware scoring system  
+- 💬 Chat-style conversational UI (ChatGPT-like experience)  
+- 📜 Bhagavad Gita verses with simplified explanations  
+- 🧠 Emotion-based response system  
+- 🎯 Weighted intent keyword matching algorithm  
 - 🔁 Session memory to avoid repetition  
-- 📱 Fully offline – No API required  
-- 🌙 Material 3 UI with dark mode support  
+- 📱 Fully offline chatbot system  
+- 🔐 Firebase Authentication (Email + Google Sign-In)  
+- 🗂️ User-specific chat history (Room Database)  
+- ✏️ Chat management (Rename, Delete, Pin)  
+- 🖼️ Profile image upload with crop (Firebase Storage)  
+- 🎨 Premium UI (Glassmorphism + Gradients)  
+- 🌙 Custom Dark/Light theme toggle  
 
 ---
 
 ## 🧠 How It Works
 
-1️⃣ User enters a question or emotional concern  
-2️⃣ Input is cleaned and analyzed  
-3️⃣ Intent keywords are detected  
-4️⃣ Verses are scored using weighted logic  
-5️⃣ Top matches are shortlisted  
-6️⃣ Krishna-style guidance is displayed  
+1️⃣ User enters a message or emotional query  
+2️⃣ Input is cleaned and processed  
+3️⃣ Emotion is detected using a lightweight analyzer  
+4️⃣ Intent keywords are matched with verse tags  
+5️⃣ Verses are scored using weighted logic  
+6️⃣ Top candidates are filtered and ranked  
+7️⃣ A relevant Krishna-style response is generated  
 
 ---
 
 ## 🏗️ System Architecture
 
-```
 Krishna-Verse
 │
 ├── 📦 data
-│   ├── GitaRepository.kt
-│   ├── GitaVerse.kt
-│   └── gita_chatbot.json
+│ ├── auth/
+│ │ └── FirebaseAuthManager.kt
+│ │
+│ ├── local/
+│ │ ├── AppDatabase.kt
+│ │ └── ChatDao.kt
+│ │
+│ └── model/
+│ ├── AuthState.kt
+│ ├── ChatEntity.kt
+│ ├── ChatItem.kt
+│ └── GitaVerse.kt
 │
-├── 📦 viewmodel
-│   └── ChatViewModel.kt
+├── 📦 repository
+│ └── GitaRepository.kt
 │
 ├── 📦 ui
-│   ├── ChatScreen.kt
-│   ├── MessageInput.kt
-│   ├── UserBubble.kt
-│   └── KrishnaBubble.kt
+│ ├── components/
+│ │ ├── AppBackground.kt
+│ │ └── DrawerItemWithIcon.kt
+│ │
+│ ├── navigation/
+│ │ └── AppNavigation.kt
+│ │
+│ └── screens/
+│ └── ChatScreen.kt
 │
-├── MainActivity.kt
+├── 📦 util
+│ ├── AnimatedMessage.kt
+│ ├── FakeEmotionDetector.kt
+│ ├── JsonLoader.kt
+│ ├── MessageBubble.kt
+│ ├── MessageInput.kt
+│ └── GitaVerse.kt
 │
-└── assets/
-    └── gita_chatbot.json
-```
+└── MainActivity.kt
+
 
 ---
 
@@ -82,24 +108,29 @@ Krishna-Verse
 The app follows **MVVM Architecture**:
 
 - 🎨 UI Layer → Jetpack Compose  
-- 🧠 ViewModel Layer → State & logic handling  
-- 📂 Repository Layer → Data processing  
-- 📜 JSON Dataset → Tagged Bhagavad Gita verses  
+- 🧠 ViewModel Layer → State & business logic  
+- 📂 Repository Layer → Data & response handling  
+- 💾 Local Layer → Room Database  
+- ☁️ Services → Firebase Authentication & Storage  
 
-✔ Clean separation of concerns  
-✔ Scalable structure  
-✔ Maintainable codebase  
+✔ Clean architecture  
+✔ Scalable for AI integration  
+✔ Maintainable and modular codebase  
 
 ---
 
 ## ⚙️ Tech Stack
 
-- 🟣 Kotlin  
-- 🎨 Jetpack Compose  
+- 🟣 Kotlin (2.0)  
+- 🎨 Jetpack Compose (Material 3)  
 - 🏗️ MVVM Architecture  
+- 🗂️ Room Database  
+- 🔐 Firebase Authentication  
+- ☁️ Firebase Storage  
+- 🌐 Retrofit + OkHttp  
 - 📂 Local JSON Dataset  
-- 🔍 Rule-Based Intent Matching  
-- 📱 Android Studio  
+- 🧠 Rule-Based NLP System  
+- 🔄 Coroutines & State Management  
 
 ---
 
@@ -107,41 +138,44 @@ The app follows **MVVM Architecture**:
 
 Accuracy is achieved through:
 
-- 🏷️ Manual semantic tagging  
-- ⚖️ Weighted keyword scoring  
-- ➕ Context bonus for multiple intent matches  
+- 🏷️ Manual semantic tagging of verses  
+- ⚖️ Weighted keyword scoring system  
+- ➕ Context bonus for multi-keyword matches  
+- 😊 Emotion-aware filtering  
 - 🔁 Session memory to prevent repetition  
-- 🧪 Manual validation testing  
 
 This ensures the system is:
+
 - Explainable  
 - Lightweight  
-- Offline-ready  
-- Academically suitable  
+- Emotion-aware  
+- Offline-capable  
+- Highly optimized for mobile  
 
 ---
 
 ## 📌 Limitations
 
-- Rule-based matching (not full NLP)  
-- Cannot understand sarcasm or complex metaphors  
-- Limited to dataset coverage  
+- Rule-based system (not full NLP yet)  
+- Limited understanding of complex language/sarcasm  
+- Depends on dataset coverage  
 
 ---
 
 ## 🔮 Future Scope
 
-- 🤖 NLP / ML integration  
+- 🤖 Gemini / OpenAI API integration  
+- ☁️ Firestore chat sync (cloud backup)  
+- 🧠 ML-based emotion detection (TensorFlow Lite)  
 - 🌍 Multi-language support  
 - 🎙️ Voice-based interaction  
-- ☁️ Cloud API integration  
-- 📊 Emotion analytics  
+- 📊 Personalized recommendations  
 
 ---
 
 ## 👨‍💻 Developer
 
-Built with dedication to merge technology with timeless wisdom.
+Built with dedication to merge modern technology with timeless spiritual wisdom.
 
 ---
 

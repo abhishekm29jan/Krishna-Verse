@@ -2,13 +2,23 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
 
     <title>KrishnaVerse • Privacy Policy</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description"
+        content="KrishnaVerse Privacy Policy and Data Transparency Information" />
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -27,42 +37,119 @@
 
         body {
 
+            font-family: "Inter", sans-serif;
+
             background:
                 radial-gradient(circle at top left,
-                    rgba(133, 76, 255, 0.18),
+                    rgba(111, 66, 193, 0.22),
                     transparent 28%),
 
                 radial-gradient(circle at bottom right,
-                    rgba(0, 153, 255, 0.14),
+                    rgba(0, 153, 255, 0.16),
                     transparent 30%),
 
                 linear-gradient(
                     180deg,
-                    #0B0F19 0%,
-                    #0E1322 100%
+                    #090D17 0%,
+                    #0D1320 100%
                 );
 
             color: #E6EDF3;
 
-            font-family: "Inter", sans-serif;
-
             overflow-x: hidden;
 
             line-height: 1.8;
+
+            min-height: 100vh;
+        }
+
+        ::selection {
+
+            background:
+                rgba(138, 180, 255, 0.35);
+        }
+
+        .bg-glow {
+
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(111, 66, 193, 0.18);
+
+            filter: blur(120px);
+
+            top: -100px;
+            left: -120px;
+
+            z-index: -1;
+
+            animation: floatGlow 10s ease-in-out infinite alternate;
+        }
+
+        .bg-glow-2 {
+
+            position: fixed;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(0, 153, 255, 0.14);
+
+            filter: blur(120px);
+
+            bottom: -100px;
+            right: -100px;
+
+            z-index: -1;
+
+            animation: floatGlow2 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatGlow {
+
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(40px);
+            }
+        }
+
+        @keyframes floatGlow2 {
+
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-40px);
+            }
         }
 
         .navbar {
 
-            width: 100%;
-
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
+
+            width: 100%;
 
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
 
-            background: rgba(11, 15, 25, 0.65);
+            background:
+                rgba(9, 13, 23, 0.68);
 
             border-bottom:
                 1px solid rgba(255, 255, 255, 0.06);
@@ -70,7 +157,7 @@
 
         .nav-content {
 
-            max-width: 1100px;
+            max-width: 1150px;
 
             margin: auto;
 
@@ -90,15 +177,20 @@
 
             align-items: center;
 
-            gap: 12px;
+            gap: 14px;
         }
 
         .logo-circle {
 
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
 
             border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
 
             background:
                 linear-gradient(
@@ -107,19 +199,14 @@
                     #3B82F6
                 );
 
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
             color: white;
-
-            font-weight: 700;
 
             font-size: 18px;
 
+            font-weight: 700;
+
             box-shadow:
-                0 4px 20px rgba(139, 92, 246, 0.4);
+                0 6px 25px rgba(139, 92, 246, 0.45);
         }
 
         .logo-text {
@@ -135,14 +222,14 @@
 
             display: flex;
 
-            gap: 24px;
+            gap: 26px;
         }
 
         .nav-links a {
 
-            color: #AAB4C3;
-
             text-decoration: none;
+
+            color: #AAB4C3;
 
             font-size: 14px;
 
@@ -156,12 +243,12 @@
 
         .container {
 
-            max-width: 920px;
+            max-width: 950px;
 
             margin: auto;
 
             padding:
-                80px 24px;
+                90px 24px;
         }
 
         .hero {
@@ -183,7 +270,7 @@
             border-radius: 999px;
 
             background:
-                rgba(255, 255, 255, 0.06);
+                rgba(255, 255, 255, 0.05);
 
             border:
                 1px solid rgba(255, 255, 255, 0.08);
@@ -194,22 +281,22 @@
 
             margin-bottom: 24px;
 
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
         }
 
         .hero h1 {
 
-            font-size: 58px;
+            font-size: 62px;
 
-            font-weight: 700;
-
-            color: white;
+            line-height: 1.08;
 
             letter-spacing: -2px;
 
-            line-height: 1.1;
-
             margin-bottom: 24px;
+
+            color: white;
+
+            font-weight: 700;
         }
 
         .hero p {
@@ -218,9 +305,18 @@
 
             margin: auto;
 
-            font-size: 18px;
-
             color: #AAB4C3;
+
+            font-size: 18px;
+        }
+
+        .last-updated {
+
+            margin-top: 26px;
+
+            color: #7D8590;
+
+            font-size: 14px;
         }
 
         .card {
@@ -235,7 +331,7 @@
 
             padding: 34px;
 
-            margin-bottom: 26px;
+            margin-bottom: 28px;
 
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
@@ -248,7 +344,7 @@
                 border-color 0.35s ease,
                 background 0.35s ease;
 
-            animation: fadeUp 0.8s ease;
+            animation: fadeUp 0.9s ease;
         }
 
         .card:hover {
@@ -257,7 +353,7 @@
                 translateY(-5px);
 
             border-color:
-                rgba(255, 255, 255, 0.15);
+                rgba(255, 255, 255, 0.16);
 
             background:
                 rgba(255, 255, 255, 0.07);
@@ -265,9 +361,9 @@
 
         .card h2 {
 
-            color: white;
-
             font-size: 24px;
+
+            color: white;
 
             margin-bottom: 16px;
 
@@ -281,46 +377,51 @@
             font-size: 16px;
         }
 
+        .highlight {
+
+            color: white;
+
+            font-weight: 500;
+        }
+
         .footer {
 
-            margin-top: 80px;
+            margin-top: 90px;
 
             text-align: center;
 
-            color: #7D8590;
-
-            animation: fadeUp 1s ease;
+            animation: fadeUp 1.1s ease;
         }
 
         .footer-logo {
 
-            font-size: 20px;
-
-            font-weight: 600;
+            font-size: 22px;
 
             color: white;
 
-            margin-bottom: 10px;
+            font-weight: 600;
+
+            margin-bottom: 12px;
         }
 
         .footer p {
 
-            font-size: 14px;
-
             color: #7D8590;
+
+            font-size: 14px;
         }
 
         .footer-links {
-
-            margin-top: 18px;
 
             display: flex;
 
             justify-content: center;
 
-            gap: 20px;
+            gap: 22px;
 
             flex-wrap: wrap;
+
+            margin-top: 22px;
         }
 
         .footer-links a {
@@ -339,12 +440,6 @@
             color: white;
         }
 
-        ::selection {
-
-            background:
-                rgba(138, 180, 255, 0.35);
-        }
-
         @keyframes fadeUp {
 
             from {
@@ -352,7 +447,7 @@
                 opacity: 0;
 
                 transform:
-                    translateY(20px);
+                    translateY(18px);
             }
 
             to {
@@ -368,7 +463,7 @@
 
             .hero h1 {
 
-                font-size: 40px;
+                font-size: 42px;
             }
 
             .hero p {
@@ -395,9 +490,13 @@
         }
 
     </style>
+
 </head>
 
 <body>
+
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
 
     <div class="navbar">
 
@@ -412,15 +511,19 @@
                 <div class="logo-text">
                     KrishnaVerse
                 </div>
+
             </div>
 
             <div class="nav-links">
+
                 <a href="#">Privacy</a>
                 <a href="#">Security</a>
-                <a href="#">Support</a>
+                <a href="#">Transparency</a>
+
             </div>
 
         </div>
+
     </div>
 
     <div class="container">
@@ -428,7 +531,7 @@
         <div class="hero">
 
             <div class="hero-badge">
-                Privacy & Data Protection
+                Privacy • Security • Transparency
             </div>
 
             <h1>
@@ -436,10 +539,15 @@
             </h1>
 
             <p>
-                KrishnaVerse is designed to provide a peaceful, secure,
-                and trustworthy AI-powered spiritual experience while
-                respecting and protecting your personal information.
+                KrishnaVerse is designed to provide a peaceful,
+                emotionally supportive, and trustworthy AI-powered spiritual experience
+                while respecting and protecting your personal information.
             </p>
+
+            <div class="last-updated">
+                Last Updated • April 2026
+            </div>
+
         </div>
 
         <div class="card">
@@ -449,12 +557,14 @@
             <p>
                 KrishnaVerse may collect limited account information such as
                 your name, email address, and profile image when using
-                Firebase Authentication or Google Sign-In.
+                secure authentication services including Firebase Authentication
+                and Google Sign-In.
                 <br><br>
-                Some conversations and personalization preferences may also be
-                stored locally on your device to improve continuity and
-                user experience.
+                Some conversation history and personalization preferences may also
+                be stored locally on your device to improve continuity,
+                responsiveness, and overall user experience.
             </p>
+
         </div>
 
         <div class="card">
@@ -465,10 +575,28 @@
                 KrishnaVerse uses AI processing services to generate
                 emotionally supportive and spiritually inspired responses.
                 <br><br>
-                Certain conversations may be securely processed through
+                Some user messages may be securely processed through trusted
                 third-party AI APIs strictly for response generation and app functionality.
-                KrishnaVerse does not sell user conversations or personal data.
+                <br><br>
+                <span class="highlight">
+                    KrishnaVerse does not sell personal conversations or user data to advertisers or external parties.
+                </span>
             </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Data Transparency</h2>
+
+            <p>
+                We believe users should understand how their information is used.
+                KrishnaVerse only accesses data required to provide core application functionality,
+                personalization, and conversational continuity.
+                <br><br>
+                Users maintain control over their account and app usage experience.
+            </p>
+
         </div>
 
         <div class="card">
@@ -476,12 +604,13 @@
             <h2>Data Storage & Security</h2>
 
             <p>
-                Reasonable security measures are implemented to help
-                protect user information and maintain a secure application environment.
+                Reasonable security practices are implemented to help protect user information
+                and maintain a secure application environment.
                 <br><br>
-                Some chat history and app preferences may remain stored
-                locally on your device for personalization and performance improvements.
+                Certain chat history and preferences may remain stored locally on your device
+                to improve app performance and provide a smoother conversational experience.
             </p>
+
         </div>
 
         <div class="card">
@@ -497,22 +626,25 @@
                 • Cloud-based backend services
                 <br><br>
                 These services may process limited information required
-                for core application functionality.
+                for authentication, response generation, and application functionality.
             </p>
+
         </div>
 
         <div class="card">
 
-            <h2>User Responsibility</h2>
+            <h2>AI Disclaimer</h2>
 
             <p>
-                KrishnaVerse is intended for informational, reflective,
-                and spiritual guidance purposes only.
+                KrishnaVerse provides AI-generated spiritual guidance intended for
+                reflective, informational, and emotional support purposes only.
                 <br><br>
-                The app does not replace professional medical,
-                psychological, legal, or therapeutic advice.
-                Users should seek qualified professional support when necessary.
+                Responses may not always be fully accurate, complete, or suitable
+                for professional medical, psychological, legal, or therapeutic advice.
+                <br><br>
+                Users should seek qualified professional assistance where necessary.
             </p>
+
         </div>
 
         <div class="card">
@@ -523,6 +655,7 @@
                 KrishnaVerse is not intended for children under the age of 13.
                 We do not knowingly collect personal information from children.
             </p>
+
         </div>
 
         <div class="card">
@@ -531,21 +664,13 @@
 
             <p>
                 This Privacy Policy may be updated periodically to reflect
-                feature improvements, legal requirements, or service changes.
+                feature improvements, legal requirements, security updates,
+                or changes in application functionality.
+                <br><br>
                 Continued use of KrishnaVerse after updates constitutes
                 acceptance of the revised policy.
             </p>
-        </div>
 
-        <div class="card">
-
-            <h2>Contact & Support</h2>
-
-            <p>
-                For questions, feedback, or privacy-related concerns,
-                please contact the KrishnaVerse developer through
-                the official support channels provided within the application.
-            </p>
         </div>
 
         <div class="footer">
@@ -559,12 +684,14 @@
             </p>
 
             <div class="footer-links">
+
                 <a href="#">Privacy Policy</a>
-                <a href="#">Support</a>
-                <a href="#">Terms</a>
+                <a href="#">Data Transparency</a>
+                <a href="#">Security</a>
+
             </div>
 
-            <p style="margin-top: 24px;">
+            <p style="margin-top: 26px;">
                 © 2026 KrishnaVerse • All Rights Reserved
             </p>
 

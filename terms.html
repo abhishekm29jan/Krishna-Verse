@@ -1,5 +1,510 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+    <title>KrishnaVerse • Terms & Conditions</title>
+
+    <meta name="description"
+        content="KrishnaVerse Terms and Conditions" />
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            background:
+                radial-gradient(circle at top left,
+                    rgba(111, 66, 193, 0.22),
+                    transparent 28%),
+
+                radial-gradient(circle at bottom right,
+                    rgba(0, 153, 255, 0.16),
+                    transparent 30%),
+
+                linear-gradient(
+                    180deg,
+                    #090D17 0%,
+                    #0D1320 100%
+                );
+
+            color: #E6EDF3;
+
+            overflow-x: hidden;
+
+            line-height: 1.8;
+
+            min-height: 100vh;
+        }
+
+        ::selection {
+
+            background:
+                rgba(138, 180, 255, 0.35);
+        }
+
+        .bg-glow {
+
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(111, 66, 193, 0.18);
+
+            filter: blur(120px);
+
+            top: -100px;
+            left: -120px;
+
+            z-index: -1;
+        }
+
+        .bg-glow-2 {
+
+            position: fixed;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(0, 153, 255, 0.14);
+
+            filter: blur(120px);
+
+            bottom: -100px;
+            right: -100px;
+
+            z-index: -1;
+        }
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            width: 100%;
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            background:
+                rgba(9, 13, 23, 0.68);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-content {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding:
+                18px 24px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+        .logo-circle {
+
+            width: 44px;
+            height: 44px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8B5CF6,
+                    #3B82F6
+                );
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 6px 25px rgba(139, 92, 246, 0.45);
+        }
+
+        .logo-text {
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            color: white;
+        }
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 26px;
+        }
+
+        .nav-links a {
+
+            text-decoration: none;
+
+            color: #AAB4C3;
+
+            font-size: 14px;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+
+            color: white;
+        }
+
+        .container {
+
+            max-width: 950px;
+
+            margin: auto;
+
+            padding:
+                90px 24px;
+        }
+
+        .hero {
+
+            text-align: center;
+
+            margin-bottom: 70px;
+        }
+
+        .hero-badge {
+
+            display: inline-block;
+
+            padding:
+                8px 18px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255, 255, 255, 0.05);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            color: #B8C2D0;
+
+            font-size: 13px;
+
+            margin-bottom: 24px;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+
+            font-size: 62px;
+
+            line-height: 1.08;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 24px;
+
+            color: white;
+
+            font-weight: 700;
+        }
+
+        .hero p {
+
+            max-width: 760px;
+
+            margin: auto;
+
+            color: #AAB4C3;
+
+            font-size: 18px;
+        }
+
+        .last-updated {
+
+            margin-top: 26px;
+
+            color: #7D8590;
+
+            font-size: 14px;
+        }
+
+        .card {
+
+            background:
+                rgba(255, 255, 255, 0.05);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 30px;
+
+            padding: 34px;
+
+            margin-bottom: 28px;
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.25);
+
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                background 0.35s ease;
+        }
+
+        .card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(255, 255, 255, 0.16);
+
+            background:
+                rgba(255, 255, 255, 0.07);
+        }
+
+        .card h2 {
+
+            font-size: 24px;
+
+            color: white;
+
+            margin-bottom: 16px;
+
+            font-weight: 600;
+        }
+
+        .card p {
+
+            color: #C9D1D9;
+
+            font-size: 16px;
+        }
+
+        .highlight {
+
+            color: white;
+
+            font-weight: 500;
+        }
+
+        .footer {
+
+            margin-top: 90px;
+
+            text-align: center;
+        }
+
+        .footer-logo {
+
+            font-size: 22px;
+
+            color: white;
+
+            font-weight: 600;
+
+            margin-bottom: 12px;
+        }
+
+        .footer p {
+
+            color: #7D8590;
+
+            font-size: 14px;
+        }
+
+        .footer-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 22px;
+
+            flex-wrap: wrap;
+
+            margin-top: 22px;
+        }
+
+        .footer-links a {
+
+            color: #8AB4FF;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.3s ease;
+        }
+
+        .footer-links a:hover {
+
+            color: white;
+        }
+
+        @media(max-width: 768px) {
+
+            .hero h1 {
+
+                font-size: 42px;
+            }
+
+            .hero p {
+
+                font-size: 16px;
+            }
+
+            .card {
+
+                padding: 26px;
+
+                border-radius: 24px;
+            }
+
+            .card h2 {
+
+                font-size: 21px;
+            }
+
+            .nav-links {
+
+                display: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <div class="navbar">
+
+        <div class="nav-content">
+
+            <div class="logo">
+
+                <div class="logo-circle">
+                    ॐ
+                </div>
+
+                <div class="logo-text">
+                    KrishnaVerse
+                </div>
+
+            </div>
+
+            <div class="nav-links">
+
+                <a href="./index.html">Privacy</a>
+                <a href="./terms.html">Terms</a>
+                <a href="#">Transparency</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="hero">
+
+            <div class="hero-badge">
+                Terms • Usage • Responsibilities
+            </div>
+
+            <h1>
+                Terms & Conditions
+            </h1>
+
+            <p>
+                Please read these Terms & Conditions carefully before using KrishnaVerse.
+                By accessing or using the application, you agree to comply with these terms.
+            </p>
+
+            <div class="last-updated">
+                Last Updated • April 2026
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Acceptance of Terms</h2>
+
+            <p>
                 By accessing or using KrishnaVerse, you agree to comply with and be bound by these Terms & Conditions.
+                If you do not agree with any part of these terms, you should discontinue use of the application.
             </p>
 
         </div>
@@ -9,19 +514,28 @@
             <h2>Use of the Application</h2>
 
             <p>
-                KrishnaVerse is intended for spiritual reflection, informational guidance, and emotional support purposes only.
-                Users agree not to misuse, abuse, reverse engineer, or attempt to disrupt the application.
+                KrishnaVerse is intended for spiritual reflection, emotional support,
+                and informational guidance purposes only.
+                <br><br>
+                Users agree not to misuse, abuse, disrupt, reverse engineer,
+                or attempt unauthorized access to the application or its services.
             </p>
 
         </div>
 
         <div class="card">
 
-            <h2>AI-Generated Content</h2>
+            <h2>AI-Generated Responses</h2>
 
             <p>
-                Responses generated within KrishnaVerse are AI-generated and may not always be fully accurate, complete, or suitable for professional advice.
-                Users should exercise personal judgment while using the application.
+                KrishnaVerse uses AI-generated responses to provide conversational guidance.
+                While efforts are made to maintain helpful and meaningful interactions,
+                responses may not always be fully accurate, complete, or contextually perfect.
+                <br><br>
+
+                <span class="highlight">
+                    Users should exercise personal judgment while using the application.
+                </span>
             </p>
 
         </div>
@@ -31,8 +545,36 @@
             <h2>User Responsibility</h2>
 
             <p>
-                Users are responsible for their own decisions and actions based on the content provided by KrishnaVerse.
-                The application should not replace professional medical, legal, therapeutic, or psychological assistance.
+                Users are responsible for their own decisions and actions based on the content
+                provided by KrishnaVerse.
+                <br><br>
+                The application should not replace professional medical, legal,
+                psychological, therapeutic, or financial advice.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Intellectual Property</h2>
+
+            <p>
+                All branding, design elements, content structure,
+                application features, and related materials associated with KrishnaVerse
+                are protected intellectual property and may not be copied,
+                redistributed, or reproduced without permission.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Service Availability</h2>
+
+            <p>
+                KrishnaVerse may periodically update, modify,
+                suspend, or discontinue certain features or services
+                without prior notice to improve functionality and user experience.
             </p>
 
         </div>
@@ -43,17 +585,27 @@
 
             <p>
                 KrishnaVerse reserves the right to modify these Terms & Conditions at any time.
-                Continued use of the application after updates constitutes acceptance of the revised terms.
+                Continued use of the application after updates constitutes acceptance
+                of the revised terms.
             </p>
 
         </div>
 
         <div class="footer">
 
+            <div class="footer-logo">
+                KrishnaVerse
+            </div>
+
+            <p>
+                AI-powered spiritual guidance inspired by timeless wisdom.
+            </p>
+
             <div class="footer-links">
 
                 <a href="./index.html">Privacy Policy</a>
                 <a href="./terms.html">Terms & Conditions</a>
+                <a href="#">Security</a>
 
             </div>
 

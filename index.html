@@ -9,90 +9,141 @@
 
     <style>
 
-        * {
-            box-sizing: border-box;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            background: #0B0F19;
-            color: #E6EDF3;
-            font-family: Inter, Arial, sans-serif;
-            line-height: 1.8;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        .container {
-            max-width: 850px;
-            margin: auto;
-            padding: 60px 24px;
-        }
+    body {
+        margin: 0;
+        background:
+            radial-gradient(circle at top left, rgba(111, 66, 193, 0.18), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(0, 170, 255, 0.12), transparent 30%),
+            #0B0F19;
 
-        .hero {
-            margin-bottom: 50px;
-        }
+        color: #E6EDF3;
+        font-family: Inter, Arial, sans-serif;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 70px 24px;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        margin-bottom: 18px;
+        color: white;
+        font-weight: 700;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        color: #AAB4C3;
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        border-radius: 28px;
+
+        padding: 32px;
+
+        margin-bottom: 24px;
+
+        backdrop-filter: blur(18px);
+
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow:
+            0 8px 40px rgba(0, 0, 0, 0.25);
+
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            background 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+
+        border-color: rgba(255, 255, 255, 0.18);
+
+        background: rgba(255, 255, 255, 0.07);
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 14px;
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    p {
+        color: #C9D1D9;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .footer {
+        margin-top: 70px;
+        text-align: center;
+        color: #7D8590;
+        font-size: 14px;
+    }
+
+    .footer span {
+        color: white;
+        font-weight: 500;
+    }
+
+    a {
+        color: #8AB4FF;
+        text-decoration: none;
+    }
+
+    ::selection {
+        background: rgba(138, 180, 255, 0.3);
+    }
+
+    @media(max-width: 768px) {
 
         .hero h1 {
-            font-size: 42px;
-            margin-bottom: 12px;
-            color: white;
-            font-weight: 700;
+            font-size: 38px;
         }
 
         .hero p {
-            font-size: 17px;
-            color: #AAB4C3;
-            max-width: 720px;
+            font-size: 16px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px;
             border-radius: 22px;
-            padding: 28px;
-            margin-bottom: 24px;
-            backdrop-filter: blur(12px);
         }
 
         h2 {
-            margin-top: 0;
-            margin-bottom: 12px;
-            color: white;
-            font-size: 22px;
+            font-size: 21px;
         }
+    }
 
-        p {
-            color: #C9D1D9;
-            margin: 0;
-        }
-
-        .footer {
-            margin-top: 50px;
-            text-align: center;
-            color: #7D8590;
-            font-size: 14px;
-        }
-
-        a {
-            color: #8AB4FF;
-            text-decoration: none;
-        }
-
-        @media(max-width: 768px) {
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .card {
-                padding: 22px;
-            }
-        }
-
-    </style>
+</style>
 </head>
 
 <body>
